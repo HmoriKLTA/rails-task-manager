@@ -1,13 +1,13 @@
 <h1 class = "header text-center mt-5 ">MY TASKS</h1>
-<div class="container">
+<div class="container" style="padding-bottom:130px;">
   <div class="cards">
     <% @tasks.each do |task| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.vecteezy.com/system/resources/previews/017/351/227/original/multiple-tasks-businessman-many-hands-doing-tasks-simultaneously-business-strategy-flat-cartoon-illustration-vector.jpg)">
         <%= link_to task.title, task_path(task), class: 'text-decoration-none text-white' %>
       </div>
-        <% end %>
-
+    <% end %>
   </div>
-      <%=  link_to "Add a new task", new_task_path, class: "btn btn-gradient d-inline-block mt-5" %>
-
+  <div class='btn-container mb-5  d-flex justify-content-end'>
+    <%=  link_to "Add a new task", new_task_path, class: "btn btn-primary mt-5" %>
+  </div>
 </div>
